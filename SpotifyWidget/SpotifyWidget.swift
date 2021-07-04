@@ -74,16 +74,16 @@ struct SpotifyWidgetEntryView : View {
                             .scaledToFit()
                             .overlay(VStack(alignment: HorizontalAlignment.center){
                                 Text(entry.title)
-                                    .font(.system(size: 20))
+                                    .font(.system(size: 16))
                                     .foregroundColor(.white)
                                     .fontWeight(.bold)
                                     .fixedSize(horizontal: false, vertical: true)
-                                    .shadow(color: .black, radius: 1, x: 1, y: 1)
+                                    .shadow(color: .black, radius: 2, x: 4, y: 4)
                                 Text("\(entry.artistName) - \(entry.albumName)")
-                                    .font(.system(size: 18))
+                                    .font(.system(size: 12))
                                     .foregroundColor(.white)
                                     .fixedSize(horizontal: false, vertical: true)
-                                    .shadow(color: .black, radius: 1, x: 1, y: 1)
+                                    .shadow(color: .black, radius: 2, x: 4, y: 4)
                                 
                                 HStack{
                                     Spacer()
@@ -93,7 +93,7 @@ struct SpotifyWidgetEntryView : View {
                                             .resizable()
                                             .frame(width: 32, height: 32, alignment: .leading)
                                             .foregroundColor(.white)
-                                            .shadow(color: .black, radius: 1, x: 1, y: 1)
+                                            .shadow(color: .black, radius: 2, x: 2, y: 2)
                                         
                                     }
                                     Spacer()
@@ -103,7 +103,7 @@ struct SpotifyWidgetEntryView : View {
                                             .resizable()
                                             .frame(width: 32, height: 32, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                             .foregroundColor(.white)
-                                            .shadow(color: .black, radius: 1, x: 1, y: 1)                                        }
+                                            .shadow(color: .black, radius: 2, x: 2, y: 2)                                        }
                                     Spacer()
                                     Link(destination: getCommandUrl(SpotifyCommands.next)){
                                         Image("next")
@@ -111,7 +111,7 @@ struct SpotifyWidgetEntryView : View {
                                             .resizable()
                                             .frame(width: 32, height: 32, alignment: .trailing)
                                             .foregroundColor(.white)
-                                            .shadow(color: .black, radius: 1, x: 1, y: 1)                                        }
+                                            .shadow(color: .black, radius: 2, x: 2, y: 2)                                        }
                                     Spacer()
                                 }
                             }.padding(15))
@@ -127,12 +127,12 @@ struct SpotifyWidgetEntryView : View {
                             }
                             VStack(alignment: HorizontalAlignment.leading){
                                 Text(entry.title)
-                                    .font(.system(size: 18))
+                                    .font(.system(size: 16))
                                     .foregroundColor(Color.init("AccentColor"))
                                     .fontWeight(.bold)
                                     .fixedSize(horizontal: false, vertical: true)
                                 Text("\(entry.artistName) - \(entry.albumName)")
-                                    .font(.system(size: 15))
+                                    .font(.system(size: 12))
                                     .foregroundColor(Color.init("AccentColor"))
                                     .fixedSize(horizontal: false, vertical: true)
                             }
